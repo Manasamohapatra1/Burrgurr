@@ -1,16 +1,67 @@
-.hero-section {
-  background: linear-gradient(to right, #fff8f0 50%, #ff9900 50%);
-  min-height: 100vh;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.text-orange {
-  color: #ff6600;
+.hero-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ff8000 50%, #ffffff 50%);
+  overflow: hidden;
+}
+
+.sticker {
+  position: absolute;
+  width: 40px;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.brand-name {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Lobster', cursive;
+  z-index: 2;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
 }
 
 .burger-img {
-  max-height: 400px;
+  width: 400px;
+  max-width: 80vw;
+  margin-bottom: 30px;
 }
 
-footer {
-  font-size: 14px;
+.order-btn {
+  background-color: black;
+  color: #ccff00;
+  padding: 15px 30px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background 0.3s ease;
 }
+
+.order-btn:hover {
+  background-color: #333;
+}
+
+.contact {
+  position: absolute;
+  bottom: 20px;
+  font-size: 18px;
+  color: black;
+  z-index: 2;
+}
+

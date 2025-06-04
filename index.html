@@ -3,25 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brrrgrrr - The Big Burger</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <title>Brrrgrrr</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="container-fluid hero-section d-flex flex-column flex-md-row align-items-center justify-content-between px-5 py-5">
-    <div class="text-section text-md-start text-center">
-      <h1 class="display-1 fw-bold text-orange">the big<br>burger.</h1>
-      <p class="lead mt-3 text-muted">What makes our burgers stand out? Premium, hand-selected ingredients, grilled to perfection for unforgettable taste. Every bite is a taste sensation!</p>
-      <a href="customize.html" class="btn btn-warning btn-lg mt-4 fw-bold">order now</a>
+  <div class="hero-section">
+    <h1 class="brand-name">Brrrgrrr</h1>
+
+    <div class="content-wrapper">
+      <img src="img/burger.png" alt="Burger" class="burger-img" />
+      <a href="customize.html" class="order-btn">Order Now</a>
     </div>
-    <div class="image-section mt-4 mt-md-0">
-      <img src="img/burger.jpeg" alt="burger" class="img-fluid burger-img">
+
+    <div class="contact">
+      <span>📞 +123-456-7890</span>
     </div>
   </div>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">MORE INFORMATION ON OUR WEBSITE</p>
-    <p class="mb-0">📍 123 Anywhere Street, Any City | 📞 +123-456-7890</p>
-  </footer>
+  <!-- JS to dynamically generate uniformly scattered stickers -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const section = document.querySelector('.hero-section');
+      const rows = 10;
+      const cols = 10;
+      const totalStickers = rows * cols;
+
+      for (let i = 0; i < totalStickers; i++) {
+        const sticker = document.createElement('img');
+        sticker.src = 'img/burger-icon2.svg';
+        sticker.classList.add('sticker');
+
+        // Uniform grid base
+        const row = Math.floor(i / cols);
+        const col = i % cols;
+
+        // Add small random jitter for organic feel
+        const top = (row / rows) * 100 + (Math.random() * 5 - 2.5); // ±2.5%
+        const left = (col / cols) * 100 + (Math.random() * 5 - 2.5);
+
+        sticker.style.top = `${top}%`;
+        sticker.style.left = `${left}%`;
+
+        section.appendChild(sticker);
+      }
+    });
+  </script>
 </body>
 </html>

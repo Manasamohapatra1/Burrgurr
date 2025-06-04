@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ff8000;
+  color: white;
+  font-size: 28px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.ingredient-panel, .preview-panel {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.ingredient-panel h2,
+.preview-panel h2 {
+  margin-top: 0;
+}
+
+#ingredient-list {
+  list-style: none;
+  padding: 0;
+}
+
+#ingredient-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+#ingredient-list button {
+  background-color: #ff8000;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#ingredient-list button:hover {
+  background-color: #e96f00;
+}
+
+.burger-stack {
+  margin-top: 15px;
+  font-size: 18px;
+  min-height: 150px;
+  padding: 10px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.remove-btn {
+  margin-top: 15px;
+  background-color: #000;
+  color: #ccff00;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #333;
+}
+
+.total-price {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ff8000;
+}
+.reset-btn, .save-btn {
+  margin-top: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.save-btn {
+  background-color: #007bff;
+}
+
+.save-btn:hover {
+  background-color: #0056b3;
+}
+
+.reset-btn:hover {
+  background-color: #cc0000;
+}
